@@ -1,0 +1,20 @@
+.cajaClientes{
+
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    
+}
+
+.logoCliente{
+    margin-bottom: 20px;
+    cursor: pointer;
+
+
+    &:hover{
+        opacity: 0.5;
+        transition: 0.3s ease-in-out;
+    }
+}

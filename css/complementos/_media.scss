@@ -1,0 +1,51 @@
+@media screen and (max-width:470px) {
+
+
+    .contenedorMaster {
+        width: 98%;
+
+    }
+
+    .contenedor-menu {
+        margin: 0;
+
+        position: absolute;
+        top: 0;
+        z-index: 5;
+
+        .menu {
+            display: none;
+        }
+    }
+
+    .btn-menu {
+        display: block;
+    }
+
+    .contenedorFotosH {
+
+        flex-wrap: wrap;
+
+    }
+
+    .texto {
+        width: 100%;
+    }
+
+    .cajaFotoForm {
+        display: none;
+    }
+
+
+
+    .logoCliente{
+        margin: 20px auto;
+        width:50%;
+        padding: 10px;
+
+        img{
+           width: 100%;
+        }
+}
+}
+

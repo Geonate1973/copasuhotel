@@ -1,0 +1,35 @@
+.servicios{
+    font-size: 13px;
+    margin: 20px 0;
+
+    i{
+        width: 30px;
+    }
+}
+
+.contenedorFotosH{
+    width: 100%;
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    
+}
+
+.cajaFotoH{
+    margin: 2px;
+
+    img{
+        width: 100%;
+    }
+    &:hover{
+        box-shadow: 0 0 10px 3px gray;
+        transition: ease-in-out 0.2s;
+    }
+}
+
+.texto.textoHabitacion{
+   p{    
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+

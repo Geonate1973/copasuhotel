@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hotel Copasu | Puerto Maldondo | Habitaciones | Cuartos</title>
+
+    <script src="https://kit.fontawesome.com/886ebdd1bd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/estilosMaster.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- codigo para recaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- fin de codigo para recaptcha -->
+</head>
+
+<body>
+
+    <div class="contenedorMaster">
+        <header>
+            <!-- <div class="botonMenu">
+                <i class="fas fa-bars"></i>
+            </div> -->
+            <div class="contenedor-menu">
+                <a href="#" class="btn-menu"><i class="fas fa-bars"></i></a>
+
+
+                <ul class="menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                   
+                    <li><a href="#"><i class="fas fa-bed"></i> Habitaciones <i class="fas fa-caret-down"></i></a>
+                        <ul>
+                            <li><a href="simple.html"><i class="far fa-caret-square-right"> </i> Simple</a></li>
+                            <li><a href="doble.html"><i class="far fa-caret-square-right"> </i> Doble</a></li>
+                            <li><a href="triple.html"><i class="far fa-caret-square-right"> </i> Triple</a></li>
+                            <li><a href="matrimonial.html"><i class="far fa-caret-square-right"> </i> Matrimonial</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="clientes.html"><i class="fas fa-male"></i> Nuestros Clientes</a></li>
+                    <li><a href="contactanos.html"><i class="fas fa-id-card-alt"></i> Contáctanos</a></li>
+                </ul>
+
+            </div>
+
+            <div class="contenedorFotoIndexS">
+                <img src="img/bannerIndex.jpg" alt="">
+            </div>
+
+        </header>
+        <div class="contenedorIndexReserva">
+            <h2 class="titulo1">CHECK AVAILBILITY</h2>
+            <div class="titulo">Haz tu Reserva!</div>
+            <p>Luego de hacer el proceso de reserva por nuestra web, nos estaremos comunicando al numero de celular registrado para completar el proceso de reserva de habitación. Gracias por confiar en nosotros para tu estadía.</p> <br><br>
+
+            <div class="contenedorForm">
+                <div class="cajaFotoForm">
+                    <img src="img/fotoForm.jpg" alt="">
+                </div>
+                <div class="cajaForm">
+                    <form action="php/recaptcha-control.php" method="post">
+                    
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" name="nombre" required placeholder="Nombre Completo">
+                        <label for="nombre">Celular</label>
+                        <input type="number" name="celular" required placeholder="Ingresa tu numero">
+                        <label for="nombre">Email</label>
+                        <input type="email" name="email" required placeholder="Ingresa tu email">
+                    
+                        <label for="checkin">CHECKIN</label>
+                        <input type="date" name="checkin" required>
+                    
+                        <label for="checkout">CHECKOUT</label>
+                        <input type="date" name="checkout" required>
+                    
+                        <label for="adultos">ADULTOS</label>
+                        <select name="adultos" >
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    
+                        <label for="ninos">NIÑOS</label>
+                        <select name="ninos">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    
+                        <label for="habitacion">HABITACIÓN</label>
+                        <select name="habitacion" >
+                            <option>Simple</option>
+                            <option>Doble</option>
+                            <option>Triple</option>
+                            <option>Matrimonial</option>
+                        </select>
+                    
+                        <br><br>
+                        <div class="g-recaptcha" data-sitekey="6Ld-Fc8UAAAAAE6YVkaeir8KD51yBK_kyGP8mLp4"></div>
+                        <br>
+                        <input type="submit" value="Enviar">
+                    
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="linea"></div>
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+body {
+  background: #3b3b3b;
+  background-image: url("/img/construccionBanner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.contenedorMaster {
+  width: 60%;
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 30px;
+}
+
+.titulo {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.parrafo {
+  margin-bottom: 30px;
+}
+
+.contenedorRedes {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.redesCaja {
+  width: 30px;
+  border: 0.5px solid #fff;
+  padding: 5px;
+}
+
+.redesCaja a {
+  color: white;
+}
+
+i {
+  font-size: 30px;
+}
+
+.contenedorFooter {
+  margin-top: 50px;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  font-size: 10px;
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    background-image: url("/img/construccionBannerCel.jpg");
+  }
+}
+/*# sourceMappingURL=construccion.css.map */
