@@ -6,7 +6,16 @@
 }
 
 body {
-  background: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body.lucuma {
+  background-color: #af9800;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body.verde {
+  background-color: #205c40;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -16,6 +25,7 @@ body {
   border: 1px solid gray;
   margin: auto;
   position: relative;
+  background-color: #fff;
 }
 
 header {
@@ -31,6 +41,12 @@ header {
   text-align: center;
   margin-top: 35px;
   margin-bottom: 35px;
+}
+
+.cuerpoTexto {
+  background-color: white;
+  margin: 0;
+  padding: 0;
 }
 
 .texto {
@@ -140,7 +156,8 @@ i.fa-bars {
 
 .logoCopasu {
   width: 20%;
-  margin: 50px auto;
+  margin: 0px auto;
+  margin-bottom: 50px;
 }
 
 .logoCopasu img {
