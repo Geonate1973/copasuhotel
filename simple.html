@@ -13,6 +13,9 @@
 
     <link href="https://fonts.googleapis.com/css?family=Carter+One|Montserrat|PT+Serif+Caption&display=swap" rel="stylesheet">
 
+        <!-- codigo para animate css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
     <!-- codigo para recaptcha -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- fin de codigo para recaptcha -->
@@ -20,37 +23,30 @@
 
 <body>
 
-    <div class="contenedorMaster">
+
         <header>
-            <!-- <div class="botonMenu">
-                <i class="fas fa-bars"></i>
-            </div> -->
-            <div class="contenedor-menu">
-                <a href="#" class="btn-menu"><i class="fas fa-bars"></i></a>
-
-
+            <div class="menu_bar">
+                <a href="#" class="bt-menu"><span><i class="fas fa-bars"></i></span>Menu</a> 
+             </div> 
+            <div class="contenedor-menu animated fadeInDown delay-1s">
                 <ul class="menu">
-                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
-                   
-                    <li><a href="#"><i class="fas fa-bed"></i> Habitaciones <i class="fas fa-caret-down"></i></a>
-                        <ul>
-                            <li><a href="simple.html"><i class="far fa-caret-square-right"> </i> Simple</a></li>
-                            <li><a href="doble.html"><i class="far fa-caret-square-right"> </i> Doble</a></li>
-                            <li><a href="triple.html"><i class="far fa-caret-square-right"> </i> Triple</a></li>
-                            <li><a href="matrimonial.html"><i class="far fa-caret-square-right"> </i> Matrimonial</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="clientes.html"><i class="fas fa-male"></i> Nuestros Clientes</a></li>
-                    <li><a href="contactanos.html"><i class="fas fa-id-card-alt"></i> Contáctanos</a></li>
-                </ul>
-
-            </div>
+                  <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                  <li><a href="simple.html"><i class="fas fa-bed"></i> </i> Simple</a></li>
+                  <li><a href="doble.html"><i class="fas fa-bed"></i> </i> Doble</a></li>
+                  <li><a href="triple.html"><i class="fas fa-bed"></i> </i> Triple</a></li>
+                  <li><a href="matrimonial.html"><i class="fas fa-bed"></i> </i> Matrimonial</a></li>
+                  <li><a href="clientes.html"><i class="fas fa-male"></i> Nuestros Clientes</a></li>
+                  <li><a href="contactanos.html"><i class="fas fa-id-card-alt"></i> Contáctanos</a></li>
+              </ul>
+  
+          </div>
 
             <div class="contenedorFotoIndexS">
                 <img src="img/bannerSimple.jpg" alt="">
             </div>
 
         </header>
+        <div class="contenedorMaster">
 <div class="cuerpoTexto">
 
     <div class="contenedorFotosH">
@@ -88,6 +84,9 @@
 <div class="servicios"><i class="fas fa-tv"></i> TV & Cable</div>
 <div class="servicios"><i class="fas fa-parking"></i> Cochera Privada</div>
 <div class="servicios"><i class="fas fa-shower"></i> Agua Caliente</div>
+<div class="botonReserva">
+    <a href="reservas.html"><p>Haz tu reserva aquí!</p></a>
+</div>
     </div>
 
 
@@ -98,19 +97,20 @@
 <footer>
                 <div class="texto">
                     <p class="footer">Copasu Hotel | Puerto Maldonado. Todos los derechos reservados.</p>
-                    <p class="footer">Página desarrollada por GEODREAMS / Georwing 2020</p>
+                    <p class="footer">Página desarrollada por  <a href="http://www.geodreamspro.com">GEODREAMS</a> / Georwing 2020</p>
                 </div>
 </footer>
         
 
     </div>
+    <!-- link para el menu celular -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/menu.js"></script>
 
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/animacion.js"></script>
 
-
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="js/main.js"></script>
-    <!-- <script src="js/jquery-1.11.0.min.js"></script> -->
-<script src="js/lightbox.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
 </body>
 
 </html>

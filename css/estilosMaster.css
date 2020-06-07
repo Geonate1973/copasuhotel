@@ -5,27 +5,59 @@
   box-sizing: border-box;
 }
 
+.animado {
+  opacity: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.mostrarArriba {
+  -webkit-animation: mostrarArriba 1s;
+          animation: mostrarArriba 1s;
+}
+
+@-webkit-keyframes .mostrarArriba {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes .mostrarArriba {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
-}
-
-body.lucuma {
-  background-color: #af9800;
-  font-family: 'Montserrat', sans-serif;
-}
-
-body.verde {
-  background-color: #205c40;
-  font-family: 'Montserrat', sans-serif;
+  background-color: #928923;
 }
 
 .contenedorMaster {
   width: 80%;
   max-width: 1000px;
-  border: 1px solid gray;
   margin: auto;
   position: relative;
-  background-color: #fff;
+}
+
+.contenedorFotoIndexS {
+  width: 100%;
+}
+
+.contenedorFotoIndexS img {
+  width: 100%;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
 }
 
 header {
@@ -44,7 +76,6 @@ header {
 }
 
 .cuerpoTexto {
-  background-color: white;
   margin: 0;
   padding: 0;
 }
@@ -67,39 +98,98 @@ i.fa-bars {
   font-size: 30px;
 }
 
-.btn-menu {
-  display: block;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  cursor: pointer;
+.slider {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
 }
 
-.btn-menu i {
-  color: black;
+.slider img {
+  width: 100%;
+}
+
+.slider ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  width: 400%;
+  -webkit-animation: cambio 20s infinite alternate;
+          animation: cambio 20s infinite alternate;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.slider ul li {
+  width: 100%;
+  list-style: none;
+}
+
+@-webkit-keyframes cambio {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -300%;
+  }
+}
+
+@keyframes cambio {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -300%;
+  }
+}
+
+.menu_bar {
+  display: none;
 }
 
 .contenedor-menu {
-  width: 20%;
-  min-width: 250px;
-  margin: 50px;
-  display: inline-block;
-  line-height: 5px;
+  width: 100%;
   position: absolute;
-  right: 0px;
-  top: 0px;
-  cursor: pointer;
-}
-
-.contenedor-menu a {
-  text-decoration: none;
-  color: #494949;
-  display: block;
-  padding: 15px 20px;
-}
-
-.contenedor-menu a:hover {
-  color: #fff;
+  background: rgba(255, 255, 255, 0.527);
+  -webkit-box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.75);
+  z-index: 10;
 }
 
 .contenedor-menu ul {
@@ -108,10 +198,12 @@ i.fa-bars {
 
 .contenedor-menu .menu {
   width: 100%;
-  display: none;
-  position: absolute;
-  right: 20px;
-  top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .contenedor-menu .menu li {
@@ -119,12 +211,15 @@ i.fa-bars {
 }
 
 .contenedor-menu .menu li a {
-  background: #fff;
+  display: block;
+  line-height: 25px;
 }
 
 .contenedor-menu .menu li a:hover {
   background: #1a95d5;
   color: #fff;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
 }
 
 .contenedor-menu .menu .activado > a {
@@ -133,7 +228,7 @@ i.fa-bars {
 }
 
 .contenedor-menu .menu ul {
-  display: none;
+  display: block;
 }
 
 .contenedor-menu .menu ul li a {
@@ -146,12 +241,14 @@ i.fa-bars {
   color: #fff;
 }
 
-.contenedorFotoIndexS {
-  width: 100%;
+.contenedor-menu .menu a {
+  text-decoration: none;
+  color: #494949;
+  padding: 15px 20px;
 }
 
-.contenedorFotoIndexS img {
-  width: 100%;
+.contenedor-menu .menu a:hover {
+  color: #fff;
 }
 
 .logoCopasu {
@@ -189,6 +286,9 @@ i.fa-bars {
   width: 45%;
   overflow: hidden;
   margin-right: 40px;
+  border: 1px solid black;
+  -webkit-box-shadow: 10px 11px 5px -7px rgba(0, 0, 0, 0.33);
+  box-shadow: 10px 11px 5px -7px rgba(0, 0, 0, 0.33);
 }
 
 .cajaFotoForm img {
@@ -211,7 +311,6 @@ label {
 }
 
 input, select {
-  margin: 5px 0;
   display: block;
 }
 
@@ -225,18 +324,32 @@ input:hover, select:hover {
 input {
   padding: 5px 0;
   color: green;
+  width: 100%;
+  margin: auto;
+}
+
+select {
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.boton {
+  margin: 5px 0;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.boton:hover {
+  border: .5px solid red;
 }
 
 .botonReserva {
+  background: rgba(255, 0, 0, 0.7);
   width: 200px;
   text-align: center;
   padding: 10px;
-  position: relative;
-  bottom: 50px;
-  float: right;
-  background: rgba(255, 0, 0, 0.7);
-  margin-bottom: 100px;
-  cursor: pointer;
+  margin: auto;
 }
 
 .botonReserva a {
@@ -266,6 +379,8 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -274,6 +389,7 @@ input {
 
 .cajaFotoH {
   margin: 2px;
+  width: 180px;
 }
 
 .cajaFotoH img {
@@ -304,7 +420,10 @@ input {
 }
 
 .logoCliente {
+  margin-left: 10px;
   margin-bottom: 20px;
+  padding: 5px;
+  border: 1px black solid;
   cursor: pointer;
 }
 
@@ -315,7 +434,7 @@ input {
 }
 
 .mapa {
-  width: 700px;
+  width: 100%;
   margin: 100px auto;
   overflow: hidden;
   padding: 20px;
@@ -323,7 +442,7 @@ input {
 }
 
 .cuadroContactanos {
-  width: 500px;
+  width: 90%;
   margin: auto;
 }
 
@@ -332,34 +451,79 @@ input {
 }
 
 footer {
-  background-color: gray;
-  color: white;
+  clear: both;
+  display: block;
+  width: 70%;
+  margin: auto;
+  height: 100px;
+  text-align: center;
 }
 
-footer p.footer {
+p.footer {
+  color: white;
   text-align: center;
-  font-size: 12px;
+  font-size: 0.7rem;
+}
+
+@media screen and (max-width: 878px) {
+  .menu_bar {
+    display: block;
+    width: 100%;
+    z-index: 11;
+  }
+  .menu_bar .bt-menu {
+    display: block;
+    padding: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-decoration: none;
+  }
+  .menu_bar span {
+    float: right;
+  }
+  .mapa {
+    width: 80%;
+  }
+  .contenedor-menu {
+    width: 80%;
+    height: 100%;
+    left: -100%;
+    margin: 0;
+    position: fixed;
+    background: rgba(43, 70, 13, 0.8);
+  }
+  .contenedor-menu .menu {
+    display: block;
+  }
+  .contenedor-menu .menu li {
+    border-bottom: white 1px solid;
+  }
+  .contenedor-menu .menu li a {
+    color: #fff;
+    line-height: 50px;
+  }
 }
 
 @media screen and (max-width: 470px) {
+  .logoCopasu {
+    width: 50%;
+    margin: 0px auto;
+    margin-bottom: 50px;
+  }
+  .logoCopasu img {
+    width: 100%;
+  }
   .contenedorMaster {
     width: 98%;
   }
-  .contenedor-menu {
-    margin: 0;
-    position: absolute;
-    top: 0;
-    z-index: 5;
+  .cajaFotoH {
+    width: 40%;
   }
-  .contenedor-menu .menu {
-    display: none;
-  }
-  .btn-menu {
-    display: block;
-  }
-  .contenedorFotosH {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  .mapa {
+    width: 80%;
   }
   .texto {
     width: 100%;

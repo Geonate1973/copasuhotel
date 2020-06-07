@@ -1,4 +1,4 @@
-body {
+body class="lucuma" {
   background: #3b3b3b;
   background-image: url("/img/construccionBanner.jpg");
   background-repeat: no-repeat;
@@ -59,7 +59,7 @@ i {
 }
 
 @media screen and (max-width: 450px) {
-  body {
+  body class="lucuma" {
     background-image: url("/img/construccionBannerCel.jpg");
   }
 }

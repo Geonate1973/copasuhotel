@@ -1,10 +1,15 @@
 
 footer{
-    background-color: gray;
-    color: white;
-    
-    p.footer{
-        text-align: center;
-        font-size: 12px;
-    }
-}
+    clear: both;
+    display: block;
+    width: 70%;
+    margin:  auto;
+    height: 100px;
+    text-align: center;
+  }
+
+p.footer{
+    color:white;
+    text-align: center;
+    font-size: 0.7rem;
+  }

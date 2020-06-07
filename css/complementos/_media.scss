@@ -1,4 +1,72 @@
+
+@media screen and (max-width:878px) {
+    .menu_bar {
+        display: block;
+        width: 100%;
+        z-index: 11;
+
+        .bt-menu{
+            display: block;
+            padding: 20px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 25px;
+            box-sizing: border-box;
+            text-decoration: none;
+            }
+
+            span{
+                float: right;
+
+            }
+        }
+
+        .mapa{
+            width: 80%;
+        }
+
+    .contenedor-menu {
+
+        width: 80%;
+        height: 100%;
+        left: -100%;
+        margin:0;
+        position: fixed;
+        background: rgba(43, 70, 13, 0.8);
+
+        .menu{
+
+            display: block;
+            
+
+            li{
+                border-bottom: rgb(255,255,255) 1px solid;
+                a{
+                    color: #fff;
+                    line-height: 50px;
+                }
+                
+            }
+            
+            
+
+        }
+    }
+    
+    }
+
+
 @media screen and (max-width:470px) {
+
+    .logoCopasu{
+        width: 50%;
+        margin: 0px auto;
+        margin-bottom:50px;
+     
+        img{
+            width:100%;
+        }
+    }
 
 
     .contenedorMaster {
@@ -6,27 +74,14 @@
 
     }
 
-    .contenedor-menu {
-        margin: 0;
-
-        position: absolute;
-        top: 0;
-        z-index: 5;
-
-        .menu {
-            display: none;
-        }
+    .cajaFotoH{
+        width: 40%;
     }
 
-    .btn-menu {
-        display: block;
-    }
+.mapa{
+    width: 80%;
+}
 
-    .contenedorFotosH {
-
-        flex-wrap: wrap;
-
-    }
 
     .texto {
         width: 100%;
